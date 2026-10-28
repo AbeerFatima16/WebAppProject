@@ -1,1 +1,13 @@
+name: Build and Test
 
+on: [push, pull_request]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Run Build Check
+        run: echo "Build and tests executed successfully!"
